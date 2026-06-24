@@ -1,0 +1,56 @@
+*{box-sizing:border-box;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+:root{--bg:#090505;--card:#111010;--accent:#f8f7f3;--muted:#d1d1d1;--muted2:#999799;--danger:#ef4444;--border:#2c2a2a;--surface:#161212}
+html,body{height:100%}
+body{background:radial-gradient(circle at top left, #370707 0%, #110909 40%, #050202 100%);margin:0;color:var(--accent)}
+.app{max-width:1180px;margin:28px auto;padding:24px}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px}
+header h1{margin:0;font-size:34px;letter-spacing:-0.05em;color:#fff}
+header p{margin:10px 0 0;color:var(--muted);max-width:640px;line-height:1.7}
+/* brand and navigation */
+.brand p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.main-nav{display:flex;gap:12px;align-items:center}
+.main-nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:12px;border:1px solid transparent}
+.main-nav a.active{background:rgba(239,68,68,0.12);color:var(--danger);border-color:rgba(239,68,68,0.12);font-weight:700}
+.main-nav a:hover{background:rgba(255,255,255,0.03);color:#fff}
+main{display:grid;grid-template-columns:380px 1fr;gap:24px}
+.card{background:var(--surface);padding:26px;border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.06)}
+.controls .card{margin-bottom:16px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:10px;font-weight:600}
+input[type="text"],input[type="url"],input[type="email"],input[type="number"],select,textarea{width:100%;padding:14px 16px;border-radius:16px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.06);color:#f7f7f7;transition:all .25s ease}
+input[type="text"]:focus,input[type="url"]:focus,input[type="email"]:focus,input[type="number"]:focus,select:focus,textarea:focus{outline:none;border-color:rgba(239,68,68,0.9);box-shadow:0 0 0 4px rgba(239,68,68,0.12)}
+textarea{min-height:100px;resize:vertical}
+.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:center}
+button{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease}
+button:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(239,68,68,0.28)}
+button#generate{background:var(--danger)}
+button#download-png{background:#b91c1c}
+button#download-svg{background:#991b1b}
+button#reset{background:#111}
+.preview{display:flex;align-items:center;justify-content:center}
+.preview-card{display:flex;flex-direction:column;align-items:center;gap:20px;min-height:560px;position:relative}
+.preview-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.08);width:100%}
+.preview-header p{font-size:14px;color:var(--muted);line-height:1.75;max-width:70%}
+#qr-wrap{background:linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);padding:26px;border-radius:32px;display:flex;align-items:center;justify-content:center;width:100%;max-width:540px;min-height:540px;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08)}
+#qr-preview{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.meta{width:100%;text-align:center}
+.meta-name{font-size:18px;font-weight:700;color:#fff}
+.meta-type{display:block;margin-top:10px;font-size:13px;color:rgba(255,255,255,0.78);letter-spacing:0.02em}
+.meta-value{margin-top:6px;font-size:15px;color:var(--danger);font-weight:700}
+.meta-desc{color:var(--muted2);font-size:14px;line-height:1.7;margin-top:8px}
+.meta-key{font-family:monospace;color:#fff;margin-top:10px;font-size:13px;word-break:break-all;background:rgba(255,255,255,0.04);padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,0.08)}
+.field-group{margin-bottom:16px}
+.range-value{display:inline-block;margin-left:8px;color:var(--muted)}
+.status-badge{display:inline-flex;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700;background:rgba(239,68,68,0.14);color:var(--danger)}
+@media(max-width:1024px){main{grid-template-columns:1fr;}}
+@media(max-width:760px){.app{padding:16px}
+.preview{min-height:auto}
+.actions{grid-template-columns:1fr}}
+
+/* small helpers */
+input[type=file]{padding:10px;background:rgba(255,255,255,0.06);border-radius:16px}
+select{appearance:none}
+button{color:#fff;border:0;border-radius:16px;padding:14px 16px;cursor:pointer}
+option{
+    color: black;
+    border: black solid 1px;
+}
